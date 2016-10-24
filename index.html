@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="vocabTester">
+  <head>
+    <meta charset="utf-8">
+    <title>vocabTester</title>
+    <script src="public/js/app.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="public/css/style.css">
+  </head>
+
+
+  <body ng-controller="HomeCtrl as home">
+    <h1>{{ home.test }}</h1>
+
+    <div class="login">
+      <h3>login</h3>
+      <form class="form" ng-submit="login.login()">
+        <div class="form-group">
+          <input class="form-control" type="email" name="email" ng-model="login.user.email" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="password" name="password" ng-model="login.user.password" placeholder="Password">
+        </div>
+        <input class="button" class="btn btn-primary" type="submit" value="Submit">
+      </form>
+      <h4>or</h4>
+    </div>
+    <div class="register">
+      <h3>register</h3>
+    <form class="form" ng-submit="register.register()">
+      <div class="form-group">
+        <input class="form-control" type="text" name="username" ng-model="register.user.username" placeholder="Username">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" name="firstName" ng-model="register.user.firstName" placeholder="First name">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" name="lastName" ng-model="register.user.lastName" placeholder="Last name">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="email" name="email" ng-model="register.user.email" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="password" name="password" ng-model="register.user.password" placeholder="Password">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="password" name="passwordConfirmation" ng-model="register.user.passwordConfirmation" placeholder="Password confirmation">
+      </div>
+      <input class="button" class="btn btn-primary" type="submit" value="Submit"/>
+    </form>
+  </div>
+
+
+
+  </body>
+</html>
