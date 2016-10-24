@@ -1,13 +1,17 @@
-.login, .register {
-  width: 100%;
-  position: relative;
+.login-register {
+  width: 50%;
   left: 0;
+  position: relative;
+  margin-left: 50%;
+  text-align: center;
 }
 
 .form-control {
-  width: 50;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .button {
   margin-bottom: 10px;
+
 }
