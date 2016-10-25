@@ -3,51 +3,40 @@
   <head>
     <meta charset="utf-8">
     <title>vocabTester</title>
-    <script src="public/js/app.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="/css/style.css" charset="utf-8">
+    <script src="/js/app.js" charset="utf-8"></script>
+    <base href="/" />
   </head>
+  <body ng-controller="mainCtrl as main">
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" ui-sref="home">vocabTester</a></li>
+          </div>
 
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li ng-show="main.user">
+                <a>Welcome, {{ main.user.username }}</a>
+              </li>
+              <li ng-show="main.user">
+                <a href="#" ng-click="main.logout()">Logout</a>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    </header>
 
-  <body ng-controller="HomeCtrl as home">
-    <h1>{{ home.test }}</h1>
-
-    <div class="login-register">
-      <h3>login</h3>
-      <form class="form" ng-submit="login.login()">
-        <div class="form-group">
-          <input class="form-control" type="email" name="email" ng-model="login.user.email" placeholder="Email">
-        </div>
-        <div class="form-group">
-          <input class="form-control" type="password" name="password" ng-model="login.user.password" placeholder="Password">
-        </div>
-        <input class="button" class="btn btn-primary" type="submit" value="Submit">
-      </form>
-      <h4>or</h4>
-      <h3>register</h3>
-    <form class="form" ng-submit="register.register()">
-      <div class="form-group">
-        <input class="form-control" type="text" name="username" ng-model="register.user.username" placeholder="Username">
-      </div>
-      <div class="form-group">
-        <input class="form-control" type="text" name="firstName" ng-model="register.user.firstName" placeholder="First name">
-      </div>
-      <div class="form-group">
-        <input class="form-control" type="text" name="lastName" ng-model="register.user.lastName" placeholder="Last name">
-      </div>
-      <div class="form-group">
-        <input class="form-control" type="email" name="email" ng-model="register.user.email" placeholder="Email">
-      </div>
-      <div class="form-group">
-        <input class="form-control" type="password" name="password" ng-model="register.user.password" placeholder="Password">
-      </div>
-      <div class="form-group">
-        <input class="form-control" type="password" name="passwordConfirmation" ng-model="register.user.passwordConfirmation" placeholder="Password confirmation">
-      </div>
-      <input class="button" class="btn btn-primary" type="submit" value="Submit"/>
-    </form>
-  </div>
-
-
-
+    <main class="container" ui-view><!-- Other controllers added HERE --></main>
   </body>
 </html>

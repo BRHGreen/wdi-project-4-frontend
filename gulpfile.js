@@ -15,7 +15,7 @@ const wait             = require('gulp-wait');
 const mainBowerFiles   = require('main-bower-files');
 const del              = require('del');
 const strip            = require('gulp-strip-comments');
-const connect          = require('gulp-connect');
+const nodemon          = require('gulp-nodemon');
 const bower            = mainBowerFiles();
 
 const src  = "src";
@@ -89,9 +89,15 @@ gulp.task("scripts", () => {
 
 gulp.task('copy', [
   'copy:fonts',
-  'copy:images'
+  'copy:images',
+  'copy:html'
 ]);
 
+// copy html from src to dist
+gulp.task("copy:html", () => {
+  return gulp.src(`${src}/**/*.html`)
+    .pipe(gulp.dest(dist));
+});
 // copy fonts from src to dist
 gulp.task("copy:fonts", () => {
   return gulp.src(`${src}/**/*.{eot,svg,ttf,woff,woff2}`)
@@ -121,13 +127,21 @@ gulp.task("watch", () => {
   gulp.watch('./index.html', ['html']);
   gulp.watch(`${src}/**/*.js`, ['bower', 'scripts']);
   gulp.watch(`${src}/**/*.scss`, ['sass']);
+  gulp.watch(`${src}/**/*.{png,gif,jpg,ico}`, ['copy:images']);
+  gulp.watch(`${src}/**/*.{eot,svg,ttf,woff,woff2}`, ['copy:fonts']);
+  gulp.watch(`${src}/**/*.html`, ['copy:html']);
 });
 
-// Serve html
-gulp.task('serve', function() {
-  connect.server({
-    port: 8000,
-    livereload: true
+gulp.task('nodemon', () => {
+  return nodemon({
+    script: 'index.js'
+  }).on('readable', () => {
+    this.stdout.on('data', chunk => {
+      if (/^listening/.test(chunk)) {
+        livereload.reload();
+      }
+      process.stdout.write(chunk);
+    });
   });
 });
 
@@ -138,5 +152,5 @@ gulp.task("default", [
   'copy',
   'scripts',
   'watch',
-  'serve'
+  'nodemon'
 ]);
