@@ -81,7 +81,7 @@ gulp.task("scripts", () => {
     ]))
     .pipe(concat('app.js'))
     .pipe(plumber())
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest(`${dist}/js`))
     .pipe(wait(1500))
     .pipe(livereload());

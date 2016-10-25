@@ -16,7 +16,12 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
     url: "/words",
     templateUrl: "/js/views/words/index.html",
     controller: "wordsIndexCtrl as words"
-  });
+  })
+  .state("wordEdit",      {
+  url: "/words/edit",
+  templateUrl:  "/js/views/words/edit.html",
+  controller:   "WordEditCtrl as word",
+});
 
   $urlRouterProvider.otherwise("/");
 }

@@ -2,8 +2,8 @@ angular
   .module("vocabTester")
   .controller("wordsIndexCtrl", wordsIndexCtrl);
 
-wordsIndexCtrl.$inject = ["Word"];
-function wordsIndexCtrl(Word) {
+wordsIndexCtrl.$inject = ["Word", "$stateParams", "$state"];
+function wordsIndexCtrl(Word, $stateParams, $state) {
   const vm = this;
   vm.words = Word.query();
 
@@ -17,8 +17,9 @@ function wordsIndexCtrl(Word) {
         vm.words.push(data);
         vm.word = "";
       })
-
       .catch(console.log);
   };
-  
+  // vm.wordDelete      = () => {
+  //   console.log('word!');
+  // };
 }

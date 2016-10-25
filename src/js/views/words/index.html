@@ -7,6 +7,9 @@
 </form>
 
 <ul>
-  <li ng-repeat="word in words.words">{{ word.body }}<a class="button"  class="btn btn-default" ng-click="word.wordDelete()">  Delete</a></li>
+
+  <li ng-repeat="word in words.words"><a class="button"  class="btn btn-default" ui-sref="wordEdit({id: word.word._id})">{{ word.body }}</a></li>
 
 </ul>
+
+<!-- <a class="btn btn-default" ng-click="word.wordDelete()">  Delete</a> -->
