@@ -1,6 +1,6 @@
 angular
-.module("vocabTester")
-.controller("WordShowCtrl", WordShowCtrl);
+  .module("vocabTester")
+  .controller("WordShowCtrl", WordShowCtrl);
 
 WordShowCtrl.$inject = ["Word", "$stateParams", "$state"];
 function WordShowCtrl(Word, $stateParams, $state){

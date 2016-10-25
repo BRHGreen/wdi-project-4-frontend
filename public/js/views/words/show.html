@@ -1,2 +1,3 @@
-<h1>More info about {{ WordShow.word.body }}</h1>
-<button class="btn btn-danger" ng-click="WordShow.delete()">Delete</button>
+<h1>More info about {{ word.word.body }}</h1>
+<button class="btn btn-danger" ng-click="word.delete()">Delete</button>
+<button class="btn btn-default" ui-sref="wordsEdit({id: word.word.id})">Edit</button>

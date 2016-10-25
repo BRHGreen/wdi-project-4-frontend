@@ -18,10 +18,15 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
     controller: "wordsIndexCtrl as words"
   })
   .state("wordsShow",      {
-  url: "/words/:id",
-  templateUrl:  "/js/views/words/show.html",
-  controller:   "WordShowCtrl as WordShow",
-});
+    url: "/words/:id",
+    templateUrl: "/js/views/words/show.html",
+    controller:  "WordShowCtrl as word",
+})
+  .state("wordsEdit",      {
+    url: "/words/:id/edit",
+    templateUrl:  "/js/views/words/edit.html",
+    controller:   "WordEditCtrl as word",
+  });
 
   $urlRouterProvider.otherwise("/");
 }
