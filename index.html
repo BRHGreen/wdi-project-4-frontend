@@ -29,6 +29,9 @@
                 <a>Welcome, {{ main.user.username }}</a>
               </li>
               <li ng-show="main.user">
+                <a ui-sref="wordsIndex">Words</a>
+              </li>
+              <li ng-show="main.user">
                 <a href="#" ng-click="main.logout()">Logout</a>
               </li>
             </ul>

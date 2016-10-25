@@ -17,10 +17,10 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
     templateUrl: "/js/views/words/index.html",
     controller: "wordsIndexCtrl as words"
   })
-  .state("wordEdit",      {
-  url: "/words/edit",
-  templateUrl:  "/js/views/words/edit.html",
-  controller:   "WordEditCtrl as word",
+  .state("wordsShow",      {
+  url: "/words/:id",
+  templateUrl:  "/js/views/words/show.html",
+  controller:   "WordShowCtrl as WordShow",
 });
 
   $urlRouterProvider.otherwise("/");

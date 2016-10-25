@@ -16,10 +16,6 @@ function wordsIndexCtrl(Word, $stateParams, $state) {
       .then(data => {
         vm.words.push(data);
         vm.word = "";
-      })
-      .catch(console.log);
+      });
   };
-  // vm.wordDelete      = () => {
-  //   console.log('word!');
-  // };
 }
