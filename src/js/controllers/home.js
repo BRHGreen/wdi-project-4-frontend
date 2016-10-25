@@ -19,7 +19,7 @@ function homeCtrl(User, CurrentUserService) {
 
   vm.register = () => {
     User
-      .register({ user: vm.registerUser }) // MIGHT NOT NEED { user: }
+      .register(vm.registerUser)
       .$promise
       .then(data => {
         const user = data.user ? data.user : null;

@@ -2,9 +2,10 @@ angular
   .module("vocabTester")
   .service("CurrentUserService", CurrentUserService);
 
-CurrentUserService.$inject = ["$rootScope", "TokenService"];
-function CurrentUserService($rootScope, TokenService){
+CurrentUserService.$inject = ["$rootScope", "TokenService", "User"];
+function CurrentUserService($rootScope, TokenService, User){
   let currentUser = TokenService.decodeToken();
+  currentUser     = User.get(currentUser);
 
   return {
     user: currentUser,
