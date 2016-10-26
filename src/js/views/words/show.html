@@ -1,6 +1,20 @@
 <h1>{{ word.word.headword }}</h1>
 
-{{ word.word }}
+<!-- {{ word.word }} -->
+
+---------------------------------------------------------
+
+<section ng-repeat="word in word">
+  <ul ng-repeat="(key, value) in word.senses">
+    <li >
+      {{ value.definition }}
+    </li>
+    <li >
+      {{ value.examples }}
+    </li>
+  </ul>
+</section>
+
 
 <button class="btn btn-danger" ng-click="word.delete()">Delete</button>
 <button class="btn btn-default" ui-sref="wordsEdit({id: word.word.id})">Edit</button>
