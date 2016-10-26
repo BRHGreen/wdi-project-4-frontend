@@ -57817,18 +57817,6 @@ angular.module('ui.bootstrap.typeahead').run(function() {!angular.$$csp().noInli
 "use strict";angular.module("vocabTester").constant("API",'http://localhost:3000/api');
 "use strict";angular.module("vocabTester").factory("AuthInterceptor",AuthInterceptor);AuthInterceptor.$inject=["API","TokenService"];function AuthInterceptor(API,TokenService){return{request:function request(config){var token=TokenService.getToken();if(config.url.indexOf(API)===0&&token){config.headers.Authorization="Bearer "+token;}return config;},response:function response(res){if(res.config.url.indexOf(API)===0&&res.data.token){TokenService.setToken(res.data.token);}return res;}};}
 "use strict";angular.module("vocabTester").service("CurrentUserService",CurrentUserService);CurrentUserService.$inject=["$rootScope","TokenService","User"];function CurrentUserService($rootScope,TokenService,User){var currentUser=TokenService.decodeToken();currentUser=User.get(currentUser);return{user:currentUser,saveUser:function saveUser(user){currentUser=user;$rootScope.$broadcast("loggedIn");},getUser:function getUser(){return currentUser;},clearUser:function clearUser(){currentUser=null;TokenService.clearToken();$rootScope.$broadcast("loggedOut");}};}
-// angular
-//   .module("vocabTester")
-//   .factory("Dictionary", dictionaryFactory);
-//
-// userFactory.$inject = ["API", "$resource"];
-// function userFactory(API, $resource){
-//   return $resource(`${API}/users/:id`, { id: "@_id"}, {
-//     'register': { method: "POST", url: `${API}/register` },
-//     'login':    { method: "POST", url: `${API}/login` }
-//   });
-// }
-"use strict";
 "use strict";
 "use strict";angular.module("vocabTester").controller("WordEditCtrl",WordEditCtrl);WordEditCtrl.$inject=["Word","$stateParams","$state"];function WordEditCtrl(Word,$stateParams,$state){var vm=this;Word.get($stateParams,function(data){vm.word=data.word;console.log(data);});vm.submit=function(){console.log("vm.word",vm.word,word);Word.update($stateParams,{word:vm.word}).$promise.then(function(data){$state.go("wordShow",$stateParams);});};}
 "use strict";angular.module("vocabTester").controller("homeCtrl",homeCtrl);homeCtrl.$inject=["User","CurrentUserService"];function homeCtrl(User,CurrentUserService){var vm=this;vm.login=function(){User.login(vm.loginUser).$promise.then(function(data){var user=data.user?data.user:null;if(user){CurrentUserService.saveUser(user);}});};vm.register=function(){User.register(vm.registerUser).$promise.then(function(data){var user=data.user?data.user:null;if(user){CurrentUserService.saveUser(user);}});};}

@@ -1,54 +1,20 @@
 <h1>{{ word.word.headword }}</h1>
 
-
-
-<!-- <section ng-repeat="word in word">
-<ul ng-repeat="(key, value) in word">
-<li>{{ key}}: {{ value }} </li>
-</ul>
-</section> -->
+</section>
 
 <section>
   <ul>
-
-
-    <li ng-repeat="word in word.word.senses">
-      <h4>Definition</h4>
-      <p>{{ word.definition }}</p>
-
-      <h4>Examples</h4>
-      <ul>
-        <li ng-repeat="example in word.examples">
-          {{ example.text }}
-        </li>
-      </ul>
-    </li>
-
+    <li>{{ word.word.part_of_speech }}</li>
+    <li>hyphenation: {{ word.word.hyphenation }}</li>
   </ul>
-  <!-- {{ word.word.senses }} -->
-
-  <!-- <ul>
-  <li ng-repeat="word in word.word">
-  {{ word }}
-</li>
-</ul> -->
-<!-- <ul>
-<li>{{ word.part_of_speech }}</li>
-<li>{{ word.hyphenation }}</li>
-<li>{{ word.pronunciations }}</li>
-</ul> -->
-
-<!-- <ul ng-repeat="(key, value) in word.senses">
-<li >
-{{ value.definition }}
-</li>
-</ul> -->
-
-<!-- <ul>
-<li ng-repeat="example in word.senses.examples">{{ example.text }}</li>
-</ul> -->
-
-
+<ul ng-repeat="word in word.word.senses|limitTo:3">
+    <h4>Definition</h4>
+    <p>{{ word.definition }}</p>
+    <li ng-repeat="example in word.examples|limitTo:1">
+      <h4>Examples</h4>
+      <p>"{{ example.text }}"</p>
+    </li>
+  </ul>
 </section>
 
 

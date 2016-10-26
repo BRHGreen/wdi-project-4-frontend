@@ -23,6 +23,7 @@ function wordsIndexCtrl(Word, $stateParams, $state, $http) {
         };
       });
     });
+
   }
 
   vm.submit = () => {
@@ -43,4 +44,5 @@ function wordsIndexCtrl(Word, $stateParams, $state, $http) {
         vm.word = "";
       });
   };
+
 }

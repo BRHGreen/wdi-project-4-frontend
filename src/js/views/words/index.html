@@ -1,6 +1,6 @@
 <h1>Words</h1>
-<form class="form" ng-submit="words.submit()">
   <div class="form-group">
+    <form class="form" ng-submit="words.submit()">
     <input
       class="form-control"
       type="addWord"
@@ -9,7 +9,9 @@
       uib-typeahead="result.label for result in words.searchDictionary($viewValue)"
       typeahead-on-select="words.chooseWord($item, $model, $label)"
       placeholder="Search for a word"
-      autocomplete="off">
+      autocomplete="off"
+      >
+
   </div>
 
 
