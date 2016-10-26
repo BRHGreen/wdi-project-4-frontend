@@ -1,3 +1,6 @@
-<h1>More info about {{ word.word.body }}</h1>
+<h1>{{ word.word.headword }}</h1>
+
+{{ word.word }}
+
 <button class="btn btn-danger" ng-click="word.delete()">Delete</button>
 <button class="btn btn-default" ui-sref="wordsEdit({id: word.word.id})">Edit</button>

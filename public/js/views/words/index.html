@@ -1,13 +1,31 @@
 <h1>Words</h1>
 <form class="form" ng-submit="words.submit()">
   <div class="form-group">
-    <input class="form-control" type="addWord" name="addWord" ng-model="words.word.body" placeholder="add word">
+    <input
+      class="form-control"
+      type="addWord"
+      name="addWord"
+      ng-model="asyncSelected"
+      uib-typeahead="result.label for result in words.searchDictionary($viewValue)"
+      typeahead-on-select="words.chooseWord($item, $model, $label)"
+      placeholder="Search for a word"
+      autocomplete="off">
   </div>
+
+  {{ words.word }}
+
   <input class="btn btn-primary" type="submit" value="Submit">
 </form>
 
 <ul>
   <li ng-repeat="word in words.words">
-    <a class="button"  class="btn btn-default" ui-sref="wordsShow({ id: word.id })">{{ word.body }}</a>
+    <ul>
+      <li>
+        <a ui-sref="wordsShow({ id: word.id })"><h2>{{ word.headword }}<h2></a>
+      </li>
+      <li>
+        <p>{{ word.definition }}</p>
+      </li>
+    </ul>
   </li>
 </ul>

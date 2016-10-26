@@ -20,6 +20,7 @@
     "bootstrap": "^3.3.7",
     "angular-ui-router": "^0.3.1",
     "angular-resource": "^1.5.8",
-    "angular-jwt": "^0.1.7"
+    "angular-jwt": "^0.1.7",
+    "angular-bootstrap": "^2.2.0"
   }
 }
