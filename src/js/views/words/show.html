@@ -18,15 +18,11 @@
       <p>"{{ example.text }}"</p>
     </li>
   </ul>
-
-  <div class="add-note-delete">
-    <button id="delete" class="btn btn-default" ng-click="word.delete()">Delete</button>
-  </div>
-
 </div>
 
 <div class="col-md-6">
-  <h1>My Notes</h1>
+  <h1>my notes</h1>
+    <button id="add-note" class="btn btn-link" ui-sref="wordsEdit({id: word.wordApi.did})">add Note...</button>
   <ul>
     <li ng-repeat="comment in word.word.comments">
       <ul>
@@ -34,5 +30,4 @@
       </ul>
     </li>
   </ul>
-      <button id="add-note" class="btn btn-default" ui-sref="wordsEdit({id: word.wordApi.did})">Add Note</button>
 </div>

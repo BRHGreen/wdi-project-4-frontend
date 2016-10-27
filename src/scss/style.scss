@@ -8,3 +8,33 @@
 @import "index";
 @import "columns";
 @import "edit";
+@import "nav";
+
+$font-main:'Trirong', serif;
+$div-color: #24201F;
+$text-color: #FCFAF9;
+
+body {
+  background-size: 100%;
+  font: 100% $font-main;
+  color: $text-color;
+}
+
+h3, h4 {
+  text-align: center;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+.ng-binding {
+  color: $text-color;
+}
+
+.col-md-6 {
+  height: 550px;
+  overflow: scroll;
+  background-color: $div-color;
+  opacity: 0.8;
+}

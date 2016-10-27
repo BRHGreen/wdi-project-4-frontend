@@ -6,6 +6,7 @@
 <div class="form-group">
   <form class="form" ng-submit="words.submit()">
     <input
+    id="add-word"
     class="form-control"
     type="addWord"
     name="addWord"
@@ -20,9 +21,9 @@
 
   <!-- <input class="btn btn-primary" type="submit" value="Submit"> -->
 </form>
-
+<div id="words-index">
   <ul>
-    <li ng-repeat="word in words.words">
+    <li ng-repeat="word in words.words| orderBy:'-'">
       <ul>
         <div class="api-info">
         <li>
@@ -35,3 +36,4 @@
         </ul>
       </li>
     </ul>
+  </div>

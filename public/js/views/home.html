@@ -1,4 +1,19 @@
-<div class="login-register">
+<div class="col-md-6">
+<div class="welcome-message">
+  <h2>Welcome to the LexMachine</h2>
+  <p>
+    You know that word you vaguely recall hearing in that high brow film you watched when you were trying to impress that person who you were sure was your intellectual superior? Ever wondered if you fully grasped the true meaning of this lofty vocabulary and if the people around you were just too polite to correct you? </br>
+  </p>
+
+    <p>
+    Expand your vocabulary  feel that warm sense of satisfaction that can only be achieved by using a conspicuously esoteric word in conversation and basking in that brief silence that inevitably follows. A silence that screams "God I don't know what that word means. That person must be so bloody intelligent".
+    This can be YOUR LIFE if you spend a few short minutes regularly using this app to slowly but surely build your vocabulary.
+  </p>
+</div>
+
+</div>
+
+<div id="login-resister" class="col-md-6">
   <h3>Login</h3>
   <form class="form" ng-submit="home.login()">
     <div class="form-group">
@@ -7,7 +22,7 @@
     <div class="form-group">
       <input class="form-control" type="password" name="password" ng-model="home.loginUser.password" placeholder="Password">
     </div>
-    <input class="btn btn-primary" type="submit" value="Submit">
+    <input class="btn btn-link" type="submit" value="Submit">
   </form>
   <h4>or</h4>
   <h3>Register</h3>
@@ -30,6 +45,6 @@
     <div class="form-group">
       <input class="form-control" type="password" name="passwordConfirmation" ng-model="home.registerUser.passwordConfirmation" placeholder="Password confirmation">
     </div>
-    <input class="btn btn-primary" type="submit" value="Submit"/>
+    <input class="btn btn-link" type="submit" value="Submit"/>
   </form>
 </div>

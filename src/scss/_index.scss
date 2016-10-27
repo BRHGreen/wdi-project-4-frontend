@@ -1,3 +1,5 @@
+$div-color: #333232;
+
 .api-info {
   width: 50%;
   margin: 0 auto;
@@ -7,4 +9,18 @@
 
 .form-control {
   max-width: 50%;
+}
+
+#words-index {
+  max-height: 550px;
+  max-width: 60%;
+  overflow: scroll;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: $div-color;
+  opacity: 0.8;
+}
+
+#add-word {
+  max-width: 60%;
 }

@@ -1,5 +1,5 @@
 
-#add-note, #delete {
+#delete {
   margin: 2%;
   height: 40px;
   width: 90px;
@@ -24,4 +24,9 @@
 .add-note-delete{
   padding-top: 5%;
   padding-bottom: 5%;
+}
+
+#add-note {
+  padding-top: 3%;
+  padding-left: 0;
 }
