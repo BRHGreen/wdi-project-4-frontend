@@ -8,6 +8,8 @@ function WordShowCtrl(Word, $stateParams, $state, $http){
 
   getWord();
 
+  vm.word = Word.get($stateParams);
+
   function getWord() {
     Word
       .get($stateParams)
@@ -16,7 +18,8 @@ function WordShowCtrl(Word, $stateParams, $state, $http){
         return $http
         .get(`http://api.pearson.com/v2/dictionaries/entries/${word.external_id}`)
         .then(function(response){
-          vm.word = response.data.result;
+          vm.wordApi = response.data.result;
+          vm.wordApi.did = $stateParams.id;
         });
       });
   }

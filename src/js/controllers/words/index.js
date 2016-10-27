@@ -41,7 +41,7 @@ function wordsIndexCtrl(Word, $stateParams, $state, $http) {
       .$promise
       .then(data => {
         vm.words.push(data);
-        vm.word = "";
+        vm.asyncSelected = "";
       });
   };
 

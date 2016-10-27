@@ -1,3 +1,9 @@
 <h1>Edit</h1>
-<h1>More info about {{ word.word.body }}</h1>
-<button class="btn btn-default" ui-sref="wordsShow({ id: word.word.id })">Done</button>
+
+<form ng-submit="word.submit()">
+  <input ng-model="word.comment.body" type="text" name="message" placeholder="Add a definition"></input>
+  <input class="btn btn-success" type="submit" value="Submit">
+</form>
+
+
+<!-- <button class="btn btn-default" ui-sref="wordsShow({ id: word.word.id })">Done</button> -->

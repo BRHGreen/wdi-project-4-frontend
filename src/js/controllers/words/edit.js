@@ -2,22 +2,20 @@ angular
   .module("vocabTester")
   .controller("WordEditCtrl", WordEditCtrl);
 
-WordEditCtrl.$inject = ["Word", "$stateParams", "$state"];
-function WordEditCtrl(Word, $stateParams, $state){
+WordEditCtrl.$inject = ["Word", "$stateParams", "$state", "$http", "API"];
+function WordEditCtrl(Word, $stateParams, $state, $http, API){
   const vm = this;
 
-  Word.get($stateParams, data => {
-    vm.word = data.word;
-    console.log(data);
-  });
-
   vm.submit = () => {
-    console.log("vm.word", vm.word, word);
-    Word
-      .update($stateParams, { word: vm.word })
-      .$promise
-      .then(data => {
-        $state.go("wordShow", $stateParams);
-      });
+
+    vm.comment.word_id = $stateParams.id;
+
+    console.log(vm.comment);
+
+    $http
+    .post(`${API}/comments`, vm.comment)
+    .then(data => {
+      $state.go("wordsShow", $stateParams);
+    });
   };
 }

@@ -3,3 +3,19 @@
 @import "landing-page";
 @import "modules/typeahead";
 @import "lists";
+@import "headings";
+@import "show-page";
+
+
+
+
+.api-info {
+  width: 50%;
+  display: inline-block;
+
+}
+.user-input {
+  width: 50%;
+  display: inline-block;
+  float: right;
+}
