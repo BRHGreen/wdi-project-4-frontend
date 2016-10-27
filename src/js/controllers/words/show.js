@@ -15,6 +15,7 @@ function WordShowCtrl(Word, $stateParams, $state, $http){
       .get($stateParams)
       .$promise
       .then(word => {
+        console.log(word);
         return $http
         .get(`http://api.pearson.com/v2/dictionaries/entries/${word.external_id}`)
         .then(function(response){

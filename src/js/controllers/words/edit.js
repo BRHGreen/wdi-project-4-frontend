@@ -16,6 +16,7 @@ function WordEditCtrl(Word, $stateParams, $state, $http, API){
     .post(`${API}/comments`, vm.comment)
     .then(data => {
       $state.go("wordsShow", $stateParams);
+      console.log('yo');
     });
   };
 }
