@@ -5,17 +5,6 @@
 @import "lists";
 @import "headings";
 @import "show-page";
-
-
-
-
-.api-info {
-  width: 50%;
-  display: inline-block;
-
-}
-.user-input {
-  width: 50%;
-  display: inline-block;
-  float: right;
-}
+@import "index";
+@import "columns";
+@import "edit";

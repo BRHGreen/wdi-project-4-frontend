@@ -1,9 +1,12 @@
-<h1>Edit</h1>
+<h1 id="notes-heading">my notes</h1>
 
-<form ng-submit="word.submit()">
-  <input ng-model="word.comment.body" type="text" name="message" placeholder="Add a definition"></input>
-  <input class="btn btn-success" type="submit" value="Submit">
-</form>
+<div class="my-notes">
+  <form id="my-notes" ng-submit="word.submit()">
+    <textarea id="notes-input" ng-model="word.comment.body" type="text" name="message" placeholder="Add a note..."></textarea>
+    <input id="notes-button" class="btn btn-default" type="submit" value="Submit">
+  </form>
+</div>
+
 
 
 <!-- <button class="btn btn-default" ui-sref="wordsShow({ id: word.word.id })">Done</button> -->
