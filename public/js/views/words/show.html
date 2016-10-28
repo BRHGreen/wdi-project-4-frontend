@@ -1,14 +1,14 @@
 
 
 
-<div class="col-md-6">
+<div id="show-left" class="col-md-6">
 
   <h1>{{ word.wordApi.headword }}</h1>
 
 
   <ul id="api-part-one">
-    <li>{{ word.wordApi.part_of_speech }}</li>
-    <li>hyphenation: {{ word.wordApi.hyphenation }}</li>
+    <li id="part-of-speach"><i>{{ word.wordApi.part_of_speech }}</i></li>
+    <li id="hyphenation">hyphenation: {{ word.wordApi.hyphenation }}</li>
   </ul>
   <ul id="api-part-two" ng-repeat="word in word.wordApi.senses|limitTo:3">
     <h5>Definition:</h5>
@@ -21,12 +21,12 @@
 </div>
 
 <div class="col-md-6">
-  <h1>my notes</h1>
+  <h1 id="notes-head">my notes:</h1>
     <button id="add-note" class="btn btn-link" ui-sref="wordsEdit({id: word.wordApi.did})">add Note...</button>
   <ul>
     <li ng-repeat="comment in word.word.comments">
       <ul>
-        <li>{{ comment.body }}</li>
+        <li><i><h2 id="note">{{ comment.body }}</h2></i></li>
       </ul>
     </li>
   </ul>

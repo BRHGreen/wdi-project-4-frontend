@@ -1,5 +1,4 @@
 #login-resister {
-
   input {
     margin: 0 auto;
   }
@@ -9,6 +8,27 @@ form {
   text-align: center;
 }
 
-.welcome-message {
-  margin-top: 60px;
+.welcome-message, .login-resister {
+  margin-top: 50px;
+
 }
+
+.welcome-text {
+  line-height: 2;
+}
+
+.welcome-heading {
+  margin-top: 0;
+}
+
+// .gradient {
+//     position: absolute;
+//     bottom: 0;
+//     height: 50px;
+//     width: 200%;
+//     background: red; /* For browsers that do not support gradients */
+//     background: -webkit-linear-gradient(red, yellow); /* For Safari 5.1 to 6.0 */
+//     background: -o-linear-gradient(red, yellow); /* For Opera 11.1 to 12.0 */
+//     background: -moz-linear-gradient(red, yellow); /* For Firefox 3.6 to 15 */
+//     background: linear-gradient(red, yellow); /* Standard syntax */
+// }

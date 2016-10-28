@@ -1,6 +1,16 @@
 #notes-input {
-  min-height:200px;
+  min-height:150px;
   min-width: 80%;
+  background-color: rgba(230,220,200,.7);
+  border: none;
+}
+
+.my-notes {
+  height: 80%;
+  background-color: rgba(0,0,0,.5);
+  max-width: 64%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 #my-notes {
@@ -9,15 +19,30 @@
   width: 80%;
 }
 
+
 #notes-heading {
   text-align: center;
+  line-height: 50px;
+  margin-bottom: 0;
 }
 
 #notes-button {
   width: 80%;
+  background-color: rgba(0,0,0,.5);
+  color: #FCFAF9;
+  border: none;
+  margin: -5px;
+  font-size: 2em;
+  padding: 10px;
 }
 
 textarea {
   color: black;
   font-size: 3em;
+}
+
+#why-not {
+  font-size: 1.5em;
+  line-height: 50px;
+  font-style: italic;
 }

@@ -1,3 +1,21 @@
+#show-left {
+  h1 {
+    font-size: 4.5em;
+    text-transform: capitalize;
+  }
+  h5 {
+    font-size: 2.5em;
+  }
+}
+
+#part-of-speach, #hyphenation {
+  font-size: 2em;
+}
+
+#hyphenation {
+  margin-bottom: 50px;
+}
+
 
 #delete {
   margin: 2%;
@@ -27,6 +45,17 @@
 }
 
 #add-note {
-  padding-top: 3%;
+  padding-top: 5%;
   padding-left: 0;
+  font-size: 1.5em;
+}
+
+#note {
+    font-size: 1.5em;
+    margin-top: 35px;
+}
+
+#notes-head {
+  font-size: 4.5em;
+  margin-top: 85px;
 }

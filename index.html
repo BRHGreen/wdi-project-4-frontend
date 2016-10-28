@@ -10,7 +10,7 @@
   </head>
   <body background="https://images.unsplash.com/photo-1465433045946-ba6506ce5a59?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=85d535c00856d02fd32b6f322394fbea" class="landing-body" ng-controller="mainCtrl as main">
     <header>
-      <nav class="navbar navbar-default">
+      <nav id="nav" class="navbar navbar-default">
         <div id="navbar" class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
@@ -20,20 +20,20 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" ui-sref="home">VocabTester</a></li>
+            <a class="navbar-brand" ui-sref="home"><strong>LexMachine</strong></a></li>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div  class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
               <li ng-show="main.user">
-                <a>Welcome, {{ main.user.username }}</a>
+                <a id="nav-username">Welcome, {{ main.user.username }}</a>
               </li>
               <li ng-show="main.user">
-                <a ui-sref="wordsIndex">Words</a>
+                <a id="nav-words" ui-sref="wordsIndex">Words</a>
               </li>
               <li ng-show="main.user">
-                <a href="#" ng-click="main.logout()">Logout</a>
+                <a id="nav-logout" href="#" ng-click="main.logout()">Logout</a>
               </li>
             </ul>
           </div><!-- /.navbar-collapse -->

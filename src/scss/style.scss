@@ -11,7 +11,7 @@
 @import "nav";
 
 $font-main:'Trirong', serif;
-$div-color: #24201F;
+$div-color: #rgba(34,38,38,1);
 $text-color: #FCFAF9;
 
 body {
@@ -35,6 +35,5 @@ p {
 .col-md-6 {
   height: 550px;
   overflow: scroll;
-  background-color: $div-color;
-  opacity: 0.8;
+  background-color: rgba(0,0,0,.6)
 }
