@@ -46,5 +46,5 @@ These steps are required in order to run the application:
 ###Credits
 - The font used throughout the site was taken from [Google Fonts] (https://fonts.google.com/)
 - The background picture was taken from [Unsplash] (https://unsplash.com/)
-- The dictionary API used was Pearson Dictionaries API the documentation for which can be found [here] [http://developer.pearson.com/apis/dictionaries]
+- The dictionary API used was Pearson Dictionaries API the documentation for which can be found [here] (http://developer.pearson.com/apis/dictionaries)
 - GA instructors Alex Chin and Rane Gowan
