@@ -1,3 +1,3 @@
 angular
   .module("vocabTester")
-  .constant("API", 'http://localhost:3000/api');
+  .constant("API", 'https://lexmachine-backend.herokuapp.com/api');
