@@ -17,7 +17,7 @@ function WordShowCtrl(Word, $stateParams, $state, $http){
       .then(word => {
         console.log(word);
         return $http
-        .get(`http://api.pearson.com/v2/dictionaries/entries/${word.external_id}`)
+        .get(`https://api.pearson.com/v2/dictionaries/entries/${word.external_id}`)
         .then(function(response){
           vm.wordApi = response.data.result;
           vm.wordApi.did = $stateParams.id;

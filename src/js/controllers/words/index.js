@@ -15,7 +15,7 @@ function wordsIndexCtrl(Word, $stateParams, $state, $http) {
   }
 
   function searchDictionary(val) {
-    return $http.get(`http://api.pearson.com/v2/dictionaries/laad3/entries?headword=${val}`).then(function(response){
+    return $http.get(`https://api.pearson.com/v2/dictionaries/laad3/entries?headword=${val}`).then(function(response){
       return response.data.results.map(function(result){
         return {
           label: `${result.headword} (${result.part_of_speech})`,
