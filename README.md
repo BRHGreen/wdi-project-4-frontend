@@ -7,6 +7,8 @@ This was my fourth project for WDI London
 ###Introduction
 This app was an individual project, built by me over six days and was the fourth of four projects during our time on the Web Development Immersive course at General Assembly, London.
 The requirements of this project were to build an authenticated RESTful application using either a MEAN stack a Rails stack or an Angular front-end with a Rails API. I took this opportunity to have a closer look at Rails and built an Angular front with Rails API.
+A hosted version of **Salvy McMeme Face** can be found [here] (https://lexmachine.herokuapp.com)
+The code can be viewed [here] (https://github.com/BRHGreen/wdi-project-4-frontend)
 
 ###The App
 **LexMachine** is an online application designed to help the user expand their vocabulary.
